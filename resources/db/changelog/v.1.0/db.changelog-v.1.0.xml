@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <changeSet id="create-users-table" author="lambakean">
+        <sqlFile dbms="postgresql"
+                 endDelimiter="\n--go"
+                 splitStatements="true"
+                 stripComments="true"
+                 relativeToChangelogFile="true"
+                 path="/01-create-users-table.sql"/>
+        <rollback>
+            <sqlFile dbms="postgresql"
+                     endDelimiter="\n--go"
+                     splitStatements="true"
+                     stripComments="true"
+                     relativeToChangelogFile="true"
+                     path="/01-drop-users-table.sql"/>
+        </rollback>
+    </changeSet>
+
+    <changeSet id="create-refresh_tokens-table" author="lambakean">
+        <sqlFile dbms="postgresql"
+                 endDelimiter="\n--go"
+                 splitStatements="true"
+                 stripComments="true"
+                 relativeToChangelogFile="true"
+                 path="/10-create-refresh_tokens-table.sql"/>
+        <rollback>
+            <sqlFile dbms="postgresql"
+                     endDelimiter="\n--go"
+                     splitStatements="true"
+                     stripComments="true"
+                     relativeToChangelogFile="true"
+                     path="/10-drop-refresh_tokens-table.sql"/>
+        </rollback>
+    </changeSet>
+
+    <changeSet id="create-photos-table" author="lambakean">
+        <sqlFile dbms="postgresql"
+                 endDelimiter="\n--go"
+                 splitStatements="true"
+                 stripComments="true"
+                 relativeToChangelogFile="true"
+                 path="/20-create-photos-table.sql"/>
+        <rollback>
+            <sqlFile dbms="postgresql"
+                     endDelimiter="\n--go"
+                     splitStatements="true"
+                     stripComments="true"
+                     relativeToChangelogFile="true"
+                     path="/20-drop-photos-table.sql"/>
+        </rollback>
+    </changeSet>
+
+    <changeSet id="create-planned_days-table" author="lambakean">
+        <sqlFile dbms="postgresql"
+                 endDelimiter="\n--go"
+                 splitStatements="true"
+                 stripComments="true"
+                 relativeToChangelogFile="true"
+                 path="/30-create-planned_days-table.sql"/>
+        <rollback>
+            <sqlFile dbms="postgresql"
+                     endDelimiter="\n--go"
+                     splitStatements="true"
+                     stripComments="true"
+                     relativeToChangelogFile="true"
+                     path="/30-drop-planned_days-table.sql"/>
+        </rollback>
+    </changeSet>
+
+    <changeSet id="create-measurement_units-table" author="lambakean">
+        <sqlFile dbms="postgresql"
+                 endDelimiter="\n--go"
+                 splitStatements="true"
+                 stripComments="true"
+                 relativeToChangelogFile="true"
+                 path="/40-create-measurement_units-table.sql"/>
+        <rollback>
+            <sqlFile dbms="postgresql"
+                     endDelimiter="\n--go"
+                     splitStatements="true"
+                     stripComments="true"
+                     relativeToChangelogFile="true"
+                     path="/40-drop-measurement_units-table.sql"/>
+        </rollback>
+    </changeSet>
+
+    <changeSet id="create-quantities-table" author="lambakean">
+        <sqlFile dbms="postgresql"
+                 endDelimiter="\n--go"
+                 splitStatements="true"
+                 stripComments="true"
+                 relativeToChangelogFile="true"
+                 path="/50-create-quantities-table.sql"/>
+        <rollback>
+            <sqlFile dbms="postgresql"
+                     endDelimiter="\n--go"
+                     splitStatements="true"
+                     stripComments="true"
+                     relativeToChangelogFile="true"
+                     path="/50-drop-quantities-table.sql"/>
+        </rollback>
+    </changeSet>
+
+    <changeSet id="create-schedules-table" author="lambakean">
+        <sqlFile dbms="postgresql"
+                 endDelimiter="\n--go"
+                 splitStatements="true"
+                 stripComments="true"
+                 relativeToChangelogFile="true"
+                 path="/60-create-schedules-table.sql"/>
+        <rollback>
+            <sqlFile dbms="postgresql"
+                     endDelimiter="\n--go"
+                     splitStatements="true"
+                     stripComments="true"
+                     relativeToChangelogFile="true"
+                     path="/60-drop-schedules-table.sql"/>
+        </rollback>
+    </changeSet>
+
+    <changeSet id="create-products-table" author="lambakean">
+        <sqlFile dbms="postgresql"
+                 endDelimiter="\n--go"
+                 splitStatements="true"
+                 stripComments="true"
+                 relativeToChangelogFile="true"
+                 path="/70-create-products-table.sql"/>
+        <rollback>
+            <sqlFile dbms="postgresql"
+                     endDelimiter="\n--go"
+                     splitStatements="true"
+                     stripComments="true"
+                     relativeToChangelogFile="true"
+                     path="/70-drop-products-table.sql"/>
+        </rollback>
+    </changeSet>
+
+    <changeSet id="create-meals-table" author="lambakean">
+        <sqlFile dbms="postgresql"
+                 endDelimiter="\n--go"
+                 splitStatements="true"
+                 stripComments="true"
+                 relativeToChangelogFile="true"
+                 path="/80-create-meals-table.sql"/>
+        <rollback>
+            <sqlFile dbms="postgresql"
+                     endDelimiter="\n--go"
+                     splitStatements="true"
+                     stripComments="true"
+                     relativeToChangelogFile="true"
+                     path="/80-drop-meals-table.sql"/>
+        </rollback>
+    </changeSet>
+
+    <changeSet id="create-planned_day_meals-table" author="lambakean">
+        <sqlFile dbms="postgresql"
+                 endDelimiter="\n--go"
+                 splitStatements="true"
+                 stripComments="true"
+                 relativeToChangelogFile="true"
+                 path="/90-create-planned_day_meals-table.sql"/>
+        <rollback>
+            <sqlFile dbms="postgresql"
+                     endDelimiter="\n--go"
+                     splitStatements="true"
+                     stripComments="true"
+                     relativeToChangelogFile="true"
+                     path="/90-drop-planned_day_meals-table.sql"/>
+        </rollback>
+    </changeSet>
+
+    <changeSet id="create-ingredients-table" author="lambakean">
+        <sqlFile dbms="postgresql"
+                 endDelimiter="\n--go"
+                 splitStatements="true"
+                 stripComments="true"
+                 relativeToChangelogFile="true"
+                 path="/100-create-ingredients-table.sql"/>
+        <rollback>
+            <sqlFile dbms="postgresql"
+                     endDelimiter="\n--go"
+                     splitStatements="true"
+                     stripComments="true"
+                     relativeToChangelogFile="true"
+                     path="/100-drop-ingredients-table.sql"/>
+        </rollback>
+    </changeSet>
+</databaseChangeLog>
